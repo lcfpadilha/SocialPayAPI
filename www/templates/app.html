@@ -1,0 +1,87 @@
+<ion-view view-title="SocialPay">
+    <ion-content class="padding">
+        <div class="card">
+            <div class="item item-divider bold green text-center">
+                Suas Doações de Junho
+            </div>
+            <div class="item item-text-wrap">
+                <canvas id="pie" class="chart chart-pie" chart-data="piedata" chart-labels="pielabels" chart-legend="true" chart-colours="piecolors" chart-click="pieClick">
+                </canvas>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider item-text-wrap bold gray item-icon-left">
+                <span class="icon ion-social-facebook"></span>
+                Você já doou R$42,00 esse mês. Compartilhe com seus amigos!
+            </div>
+            <div class="item item-text-wrap item-icon-left">
+                <span class="icon ion-heart green"></span> Faltam apenas <span class="green">R$8,00</span> para atingir a meta de doações deste mês!
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider bold green text-center">
+                Histórico por Mês
+            </div>
+            <div class="item item-text-wrap">
+                <canvas id="line" class="chart chart-line" data="linedata" labels="linelabels" options="{showTooltips: false}" chart-colours="linecolor"></canvas>
+            </div>
+            <div class="item item-text-wrap">
+                <span class="bold green">Total no ano:</span> <span class="bold">R$350,00</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider bold green text-center">
+                Doações Recentes
+            </div>
+            <div class="item item-avatar">
+                <img src="img/luis.jpg">
+                <h2>Luís Felipe</h2>
+                <p>Médicos sem Fronteiras</p>
+            </div>
+            <div class="item item-avatar">
+                <img src="img/gustavo.jpg">
+                <h2>Gustavo Silva</h2>
+                <p>Wikipédia</p>
+            </div>
+            <div class="item item-avatar">
+                <img src="img/leo.jpg">
+                <h2>Leonardo Padilha</h2>
+                <p>Greenpeace</p>
+            </div>
+            <div class="item item-avatar">
+                <img src="img/damatta.jpg">
+                <h2>Victor da Matta</h2>
+                <p>Terremoto no Equador</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider bold green text-center">
+                Maiores doadoras
+            </div>
+            <div class="item item-thumbnail-left item-icon-right">
+                <img src="img/master.jpg">
+                <h2>MasterCard</h2>
+                <p>WWF
+                    <br> Hospital Santa Marcelina
+                    <br> Casa Hope</p>
+                <span class="icon ion-ribbon-b gold"></span>
+            </div>
+            <div class="item item-thumbnail-left item-icon-right">
+                <img src="img/face.jpg">
+                <h2>Facebook</h2>
+                <p>Wikipedia
+                    <br> André Luiz
+                    <br> Casa Hope</p>
+                <span class="icon ion-ribbon-b silver"></span>
+            </div>
+            <div class="item item-thumbnail-left item-icon-right">
+                <img src="img/coca.jpg">
+                <h2>Coca-Cola</h2>
+                <p>Wikipedia
+                    <br> Hospital do Câncer
+                    <br> AACD</p>
+                <span class="icon ion-ribbon-b bronze"></span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

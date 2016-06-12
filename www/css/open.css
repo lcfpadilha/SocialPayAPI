@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/Open-Sans-Light.woff) format('woff'), url(../fonts/Open-Sans-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Open-Sans.eot);
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/Open-Sans.svg#OpenSans) format('svg'), url(../fonts/Open-Sans.eot?#iefix) format('embedded-opentype'), url(../fonts/Open-Sans.woff) format('woff'), url(../fonts/Open-Sans.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/Open-Sans-Bold.woff) format('woff'), url(../fonts/Open-Sans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../fonts/Open-Sans-Italic.woff) format('woff'), url(../fonts/Open-Sans-Italic.ttf) format('truetype');
+}
+
