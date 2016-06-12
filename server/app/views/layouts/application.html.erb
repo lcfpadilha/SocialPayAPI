@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocialPay</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js' %>
+  <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js' %>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>
+  <%= javascript_include_tag 'https://js.stripe.com/v2/' %>
+	<%= csrf_meta_tags %>
+      <style>
+    .wrap {
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+    
+    .title {
+        background-color: green;
+        color: white;
+        text-align: center;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+        padding: 5px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .body {
+        padding: 5px;
+    }
+    
+    .body > img {
+        width: 15%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+    }
+    
+    .body h1 {
+        font-size: 24px;
+        text-align: center;
+        color: green;
+    }
+    
+    .body h2 {
+        font-size: 21px;
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin-top: 0;
+    }
+    
+    .body .panel {
+        width: 80%;
+        border: 0;
+        margin: 0 auto;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #666;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .body .panel img {
+        width: 70%;
+    }
+    
+    .clearfix {
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

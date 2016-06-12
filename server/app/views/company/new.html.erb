@@ -1,0 +1,14 @@
+<h2>Cadastre sua empresa</h2>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<%= form_for @company, html: { multipart: true } do |f| %>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :name %>
+  </div>
+  <br><br>
+  <div class="actions">
+    <%= f.submit "Salvar" %>
+  </div>
+<% end %>

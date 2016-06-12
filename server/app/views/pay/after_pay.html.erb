@@ -1,0 +1,43 @@
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <div class="wrap">
+                <div class="title">
+                    SocialPay
+                </div>
+                <div class="body">
+                	<%= image_tag("right.png", :alt => "rss feed") %>
+                    <h1>Pagamento e doação efetuados com sucesso!</h1>
+                    <h2>A instituição logo receberá seu donativo.</h2>
+                    <br>
+                    <div class="panel row" id="share">
+                        <div class="col-xs-6 col-md-3">
+                            <%= image_tag("face.png") %>
+                        </div>
+                        <div class="col-xs-6 col-md-9">
+                            <p>Compartilhe com seus amigos do Facebook!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+function openFbPopUp() {
+    var fburl = 'socialpay.herokuapp.com';
+    var fbimgurl = 'http://';
+    var fbtitle = 'SocialPay';
+    var fbsummary = "Você ajudou Casa Azul com 2,00 reais!";
+    var sharerURL = "http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURI(fburl) + "&p[images][0]=" + encodeURI(fbimgurl) + "&p[title]=" + encodeURI(fbtitle) + "&p[summary]=" + encodeURI(fbsummary);
+    window.open(
+      sharerURL,
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return  false;
+}
+$("#share").click(function(){
+	openFbPopUp();
+});
+</script>

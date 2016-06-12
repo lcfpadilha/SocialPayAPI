@@ -1,0 +1,98 @@
+<style>
+    .wrap {
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+
+    .panel {
+        border-radius: 8px;
+    }
+    
+    .panel .panel-heading, .panel-title {
+        background-color: green;
+        color: white;
+        text-align: center;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+        padding: 5px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .panel .body-title {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        padding-left: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        color: green;
+    }
+    
+    .clearfix {
+        clear: both;
+    }
+
+    .btn.btn-success {
+        background-color: green !important;
+    }
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <%= form_tag(save_card_info_path, method: :post, id: 'simplify-payment-form') do %>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                        SocialPay
+                    </h3>
+                    </div>
+                    <div class="body-title">
+                        Dados do Cartão:
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="cardNumber">
+                                NÚMERO DO CARTÃO</label>
+                            <div class="input-group">
+                                <%= text_field_tag('card', nil, maxlength: 20, autocomplete: 'off', autofocus: true, class: 'form-control') %>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="expityMonth"> DATA DE EXPIRAÇÃO</label>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-lg-6 pl-ziro">
+                                            <%= select_month(Date.new(Date.today.year, 1).beginning_of_month, {use_two_digit_numbers: true}, {name: 'm', class: 'form-control'}) %>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-6 pl-ziro">
+                                            <%= select_year(Date.today, {start_year: Date.today.year-2000, end_year: Date.today.year+10-2000}, {name: 'y', class: 'form-control'}) %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cvCode">
+                                        COD. VERIFICADOR</label>
+                                    <%= text_field_tag('cv', nil, maxlength: 4, autocomplete: 'off', class: 'form-control') %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <%= submit_tag('Salvar Cartão', id: 'process-payment-btn', class: "btn btn-success btn-block") %>
+                    <% end %>
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" id="error" style="display: none;">
+                </div>
+                <input type="hidden" id="ckey" name="ckey" value="" />
+        </div>
+    </div>
+</div>
